@@ -46,3 +46,21 @@ select * from ContactTypeMapping;
 insert into ContactTypeMapping (FirstName,LastName,Name_id) values('Nitish','Kumar','1');
 insert into ContactTypeMapping (FirstName,LastName,Name_id) values('Rahul','Nayar','2');
 select * from ContactTypeMapping;
+
+--UC13:- Ensure all retrieve queries done especially in UC 6, UC 7, UC 8 and UC 10 are working with new table structure.
+--retrieve data perticuar city or state
+select * from ContactDetails CD 
+inner join Addresses A on A.Address_id=CD.Contact_id;
+
+--Count Book by city or state
+select COUNT(*),City from ContactDetails CD 
+inner join Addresses A on A.Address_id=CD.Contact_id
+group by A.City;
+
+--Contacts city sorted Alphabetically by Address Name
+select * from ContactDetails CD 
+inner join Addresses A on A.Address_id=CD.Contact_id
+order by CD.Address;
+
+--Count contact
+select Count(*) From ContactDetails;
