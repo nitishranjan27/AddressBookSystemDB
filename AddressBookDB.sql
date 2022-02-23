@@ -27,3 +27,12 @@ select * from AddressBook;
 insert into AddressBook values('Rupesh','Singh','DRDO colony','Saharsa','Bihar','222129','8172365898','rupeshkr@gmail.com');
 
 insert into AddressBook values('Rahul','Nayr','Nagpur','Nagpur','Maharashtra','442203','12345678910','oprekr@gmail.com');
+
+--UC4:- Ability to edit existing contact person using their name.
+update AddressBook set zip=829122 where firstName='Nitish';
+select * from AddressBook;
+
+update AddressBook set email='nkranjan@gmail.com' where firstName='Nitish';
+
+update AddressBook set lastName='Singh' where firstName='Rahul';
+select * from AddressBook;
