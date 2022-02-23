@@ -36,3 +36,7 @@ update AddressBook set email='nkranjan@gmail.com' where firstName='Nitish';
 
 update AddressBook set lastName='Singh' where firstName='Rahul';
 select * from AddressBook;
+
+--UC5:- Ability to delete a person using person's name.
+Delete AddressBook where firstName='Rahul';
+select * from AddressBook;
